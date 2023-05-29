@@ -35,6 +35,16 @@ export default {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
-    padding: 0 140px;
+    /* padding: 0 140px; */
+}
+/* For mobile responsive */
+@media (max-width: 767px) {
+    .products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 20px;
+    margin-top: 20px;
+}
 }
 </style>
