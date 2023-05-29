@@ -8,10 +8,10 @@
 <script>
 import Product from './Product.vue';
 let items = [
-    { name: 'Water bottle', price: '9.99', info:'This is the best product and the best quality', img:'image1.png' },
-    { name: 'Water bottle', price: '9.99', info:'This is the best product and the best quality', img:'image1.png' },
-    { name: 'Water bottle', price: '9.99', info:'This is the best product and the best quality', img:'image1.png' },
-    { name: 'Water bottle', price: '9.99', info:'This is the best product and the best quality', img:'image1.png' },
+    { name: 'Water bottle', price: '9.99', info:'This is the best product and the best quality', img:'book(1).png' },
+    { name: 'Water bottle', price: '9.99', info:'This is the best product and the best quality', img:'book(1).png' },
+    { name: 'Water bottle', price: '9.99', info:'This is the best product and the best quality', img:'book(1).png' },
+    { name: 'Water bottle', price: '9.99', info:'This is the best product and the best quality', img:'book(1).png' },
 ]
 export default {
 
@@ -35,7 +35,7 @@ export default {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
-    /* padding: 0 140px; */
+    padding: 0 100px;
 }
 /* For mobile responsive */
 @media (max-width: 767px) {

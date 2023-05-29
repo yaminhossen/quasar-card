@@ -30,7 +30,10 @@
         >
           Essential Links
         </q-item-label>
-
+        <div>
+          <RouterLink  id="links" to="/carts">Cart</RouterLink> <br>
+          <RouterLink id="links" to="/products">All Product</RouterLink>
+        </div>
         <!-- <EssentialLink
           v-for="link in essentialLinks"
           :key="link.title"
@@ -47,65 +50,23 @@
 
 <script>
 import { defineComponent, ref } from 'vue'
-import EssentialLink from 'components/EssentialLink.vue'
+import Cart from 'src/components/Carts.vue'
+import Products from 'src/components/Products.vue'
 
-const linksList = [
-  {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
-  },
-  {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
-  },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
-  }
-]
+
 
 export default defineComponent({
   name: 'MainLayout',
 
   components: {
-    EssentialLink
+     Cart, Products
   },
 
   setup () {
     const leftDrawerOpen = ref(false)
 
     return {
-      essentialLinks: linksList,
+      
       leftDrawerOpen,
       toggleLeftDrawer () {
         leftDrawerOpen.value = !leftDrawerOpen.value
@@ -114,3 +75,19 @@ export default defineComponent({
   }
 })
 </script>
+<style scoped>
+#links{
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: rgb(165, 164, 164);
+  display: block;
+  color: rgb(104, 103, 103);
+  padding-left: 20px;
+}
+#links:hover{
+  background-color: rgb(81, 79, 79);
+  color: white;
+}
+</style>

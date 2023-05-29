@@ -5,7 +5,7 @@
   </div> -->
   <div class="product">
     <div class="image">
-        <img src="image1.png" alt="">
+        <img src="book2.png" alt="">
     </div>
     <div class="info">
         <h6>{{ product.name }}</h6>
